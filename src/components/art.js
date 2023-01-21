@@ -40,6 +40,14 @@ export default function Art() {
         fetchFilteredObjects();
     }, [filtered]);
 
+    // Effect that checks local storage for saved artworks 
+    useEffect(() => {
+        const storedFavorites = JSON.parse(localStorage.getItem('favorites'));
+        if (storedFavorites) {
+            setFavorites(storedFavorites);
+        }
+    }, []);
+
     /*
     function getRandomInt(min, max) {
         min = Math.ceil(min);
@@ -72,7 +80,7 @@ export default function Art() {
             setFiltered([...filtered, id]);
         }
         else {
-            setFiltered(filtered.filter(d => d !== id));
+            setFiltered(filtered.filter(dept => dept !== id));
         }
         console.log(filtered);
     };
