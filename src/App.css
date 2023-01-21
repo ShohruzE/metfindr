@@ -104,6 +104,10 @@ input, textarea {
 }
 
 */
+.container .filter h1 {
+  border-bottom: 3px solid red;
+  margin-bottom: 0.5em;
+}
 
 .container .filter .item {
   border-bottom: 2px solid gainsboro;
@@ -169,8 +173,13 @@ input, textarea {
   margin: 2em;
 }
 
+
+
 .favorites h1 {
-  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-self: center;
+  border-bottom: 3px solid red;
   margin: 1em;
 }
 
